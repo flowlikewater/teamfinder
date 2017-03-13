@@ -1,1 +1,3 @@
-{{outlet}}
+{{#each model.football as |team|}}
+  {{team-list model=team}}
+{{/each}}

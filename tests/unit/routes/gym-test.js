@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:bodybuilding', 'Unit | Route | bodybuilding', {
+moduleFor('route:gym', 'Unit | Route | gym', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

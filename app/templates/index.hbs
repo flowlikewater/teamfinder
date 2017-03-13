@@ -4,7 +4,7 @@
 <select class="sport">
   <option value="football">Football</option>
   <option value="basketball">Basketball</option>
-  <option value="bodybuilding">BodyBuilding</option>
+  <option value="gym">Gym</option>
 </select>
 <h5> Dropdown location</h5>
 <select class="location">
@@ -16,10 +16,10 @@
 
 <hr>
 
-<h4> Categories</h4>
-<h5> Football (100)</h5>
-<h5> Basketball (140)</h5>
-<h5> BodyBuilding (60)</h5>
+  <h4> Categories</h4>
+  {{#link-to 'football'}}<h5> Football (100)</h5>{{/link-to}}
+  {{#link-to 'basketball'}}<h5> Basketball (140)</h5>{{/link-to}}
+  {{#link-to 'gym'}}<h5> Gym (60)</h5>{{/link-to}}
 </div>
 
 <div class="col-md-6">
@@ -31,6 +31,6 @@
 
 <h3>Component / Nested Route </h3>
 {{#each model.teams as |team|}}
-{{team.name}}
+  {{team-list model=team}}
 {{/each}}
 </div>

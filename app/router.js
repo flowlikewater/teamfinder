@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('football');
   this.route('basketball');
   this.route('bodybuilding');
+  this.route('gym');
 });
 
 export default Router;
