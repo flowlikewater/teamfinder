@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('football');
+  this.route('basketball');
+  this.route('bodybuilding');
 });
 
 export default Router;
