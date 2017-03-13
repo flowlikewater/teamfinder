@@ -17,6 +17,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyBWIg2Sk9uUwoGST1dQTt9DsrImFDVPY-g",
+      authDomain: "teamfinder-4a0f9.firebaseapp.com",
+      databaseURL: "https://teamfinder-4a0f9.firebaseio.com",
+      storageBucket: "teamfinder-4a0f9.appspot.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

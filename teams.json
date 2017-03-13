@@ -1,0 +1,69 @@
+{
+  "teams": [{
+    "name": "team-swag",
+    "category": "football",
+    "description": "team-swag is hong kong's most prestegious football club",
+    "totalplayers": 7,
+    "playerswanted": 1,
+    "agerange": "18 to 35",
+    "location": "wan chai"
+  }, {
+    "name": "team-hk",
+    "category": "football",
+    "description": "team-hk consists of the best of the best players",
+    "totalplayers": 6,
+    "playerswanted": 2,
+    "agerange": "25 to 50",
+    "location": "kowloon"
+  }, {
+    "name": "spaghetti-monsters",
+    "category": "basketball",
+    "description": "team spaghetti monsters is a young basketball team",
+    "totalplayers": 3,
+    "playerswanted": 2,
+    "agerange": "10 to 16",
+    "location": "central"
+  }, {
+    "name": "little-fresh-meat",
+    "category": "basketball",
+    "description": "i am pace, the leader of the fresh meat club, we are the bestest",
+    "totalplayers": 2,
+    "playerswanted": 3,
+    "agerange": "23 to 45",
+    "location": "wan chai"
+  }, {
+    "name": "lets-get-biiiig",
+    "category": "gym",
+    "description": "creatine is my god",
+    "totalplayers": 1,
+    "playerswanted": 1,
+    "agerange": "23 to 26",
+    "location": "central"
+  }, {
+    "name": "skip-leg-day-every-day",
+    "category": "gym",
+    "description": "training legs is a waste of time",
+    "totalplayers": 1,
+    "playerswanted": 1,
+    "agerange": "30 to 35",
+    "location": "wan chai"
+  }],
+
+  "players": [{
+    "name": "pacelee",
+    "sex": "male",
+    "description": "I love football, seeking a return to the game after a year out in NZ. Played in my early twenties in the UK.",
+    "build": "fat",
+    "age": "25",
+    "location": "wan chai",
+    "email": "bigfatpace@hotmail.com"
+  }, {
+    "name": "kenng",
+    "sex": "male",
+    "description": "I love to gym, leg-day every day.",
+    "build": "demi-god",
+    "age": "25",
+    "location": "wan chai",
+    "email": "kenthedemigod@hotmail.com"
+  }]
+}
