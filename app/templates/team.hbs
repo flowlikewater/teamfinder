@@ -9,3 +9,11 @@
 </div>
 
 {{player-send-message sendMessage="sendMessage" team=model.teams}}
+
+{{#each model.teams.messages as |message|}}
+<div style="width:200px;border:1px solid red; margin:10px">
+<li>Message:{{message.message}}</li>
+<li>Time:{{message.time}}</li>
+<li>By {{message.name}}</li>
+</div>
+{{/each}}
