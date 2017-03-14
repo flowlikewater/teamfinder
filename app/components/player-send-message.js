@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  credentials: Ember.inject.service(),
   openMessageForm: false,
   actions: {
     MessageFormShow() {
@@ -8,7 +9,7 @@ export default Ember.Component.extend({
     },
     sendMessage() {
      var params = {
-       name: this.get('name'),
+       name: this.get('credentials.name'),
        message: this.get('message'),
        time: this.get('time'),
        team: this.get('team')
