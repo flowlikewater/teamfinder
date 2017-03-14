@@ -1,1 +1,11 @@
-{{outlet}}
+<div>
+  <h2>Team Name: {{model.teams.name}}</h2>
+  <h3>Category: {{model.teams.category}}</h3>
+  <p>Total Players: {{model.teams.totalplayer}}</p>
+  <p>Players Wanted: {{model.teams.playerswanted}}</p>
+  <p>Age Range: {{model.teams.agerange}}</p>
+  <p>Location: {{model.teams.location}}</p>
+  <p>Description: {{model.teams.description}}</p>
+</div>
+
+{{player-send-message sendMessage="sendMessage" team=model.teams}}

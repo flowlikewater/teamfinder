@@ -1,5 +1,5 @@
 <div>
-  <h2>Team Name: {{model.name}}</h2>
+  {{#link-to 'team' model.id}}<h2>Team Name: {{model.name}}</h2>{{/link-to}}
   <h3>Category: {{model.category}}</h3>
   <p>Total Players: {{model.totalplayer}}</p>
   <p>Players Wanted: {{model.playerswanted}}</p>
