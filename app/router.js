@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('bodybuilding');
   this.route('gym');
   this.route('team',{path:'/team/:team_id'});
+  this.route('player',{path:'/player/:player_id'});
 });
 
 export default Router;
