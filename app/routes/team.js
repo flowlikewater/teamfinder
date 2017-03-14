@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       teams: this.store.findRecord('team', params.team_id),
       players: this.store.findAll('player'),
+      messages: this.store.findAll('message'),
       basketball: this.store.query('team', {
         orderBy: 'category',
         equalTo: 'basketball'
