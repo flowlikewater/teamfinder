@@ -1,9 +1,16 @@
-<div>
-  {{#link-to 'team' model.id}}<h2>Team Name: {{model.name}}</h2>{{/link-to}}
-  <h3>Category: {{model.category}}</h3>
-  <p>Total Players: {{model.totalplayer}}</p>
-  <p>Players Wanted: {{model.playerswanted}}</p>
-  <p>Age Range: {{model.agerange}}</p>
-  <p>Location: {{model.location}}</p>
-  <p>Description: {{model.description}}</p>
+<div class="row">
+  {{#link-to 'team' model.id}}
+    <h4>Team Name: {{model.name}}</h4>{{/link-to}}
+  <h4>Category: {{model.category}}</h4>
+  <div class="col-md-6">
+    <p><b>Total Players:</b> {{model.totalplayer}}</p>
+    <p><b>Players Wanted:</b> {{model.playerswanted}}</p>
+  </div>
+  <div class="col-md-6">
+    <p><b>Age Range:</b> {{model.agerange}}</p>
+    <p><b>Location:</b> {{model.location}}</p>
+  </div>
+  <div class="col-md-12">
+  <p><b>Description:</b> {{model.description}}</p>
+</div>
 </div>
