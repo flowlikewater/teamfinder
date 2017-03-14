@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('bodybuilding');
   this.route('gym');
   this.route('sign-up-player');
+  this.route('sign-up-team');
 });
 
 export default Router;

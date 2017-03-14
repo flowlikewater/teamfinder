@@ -8,25 +8,25 @@ export default Ember.Route.extend({
       players: this.store.findAll('player')
     });
   },
-  signUpPlayer: false,
+  signUpTeam: false,
   actions: {
     signUpFormShow() {
-      this.controller.set('signUpPlayer', true);
+      this.controller.set('signUpTeam', true);
     },
     saveSignUp() {
       var params = {
         name: this.controller.get('name'),
-        sex: this.controller.get('sex'),
+        category: this.controller.get('category'),
         loginid: this.controller.get('loginid'),
         loginpassword: this.controller.get('loginpassword'),
         description: this.controller.get('description'),
-        build: this.controller.get('build'),
-        age: this.controller.get('age'),
-        location: this.controller.get('location'),
-        email: this.controller.get('email')
+        totalplayers: this.controller.get('totalplayers'),
+        playerswanted: this.controller.get('playerswanted'),
+        agerange: this.controller.get('agerange'),
+        location: this.controller.get('location')
       };
-      var newPlayer = this.store.createRecord('player',params);
-      newPlayer.save();
+      var newTeam = this.store.createRecord('team',params);
+      newTeam.save();
       this.transitionTo('index');
     }
      //this.set('signUpPlayer', false);

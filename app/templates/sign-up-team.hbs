@@ -1,5 +1,5 @@
-{{#if signUpPlayer}}
-<h1>New Player</h1>
+{{#if signUpTeam}}
+<h1>New Team</h1>
   <div>
     <form>
       <div class="form-group">
@@ -7,8 +7,8 @@
         {{input value=name id="name"}}
       </div>
       <div class="form-group">
-        <label for="sex">Sex</label>
-        {{input value=sex id="sex"}}
+        <label for="category">Category</label>
+        {{input value=category id="category"}}
       </div>
       <div class="form-group">
         <label for="loginid">login ID</label>
@@ -23,25 +23,29 @@
         {{input value=description id="description"}}
       </div>
       <div class="form-group">
-        <label for="build">Build</label>
-        {{input value=build id="build"}}
+        <label for="totalplayers">Total Players</label>
+        {{input value=totalplayers id="totalplayers"}}
       </div>
       <div class="form-group">
-        <label for="age">Age</label>
-        {{input value=age id="age"}}
+        <label for="playerswanted">Players Wanted</label>
+        {{input value=playerswanted id="playerswanted"}}
+      </div>
+      <div class="form-group">
+        <label for="agerange">Age Range</label>
+        {{input value=agerange id="agerange"}}
       </div>
       <div class="form-group">
         <label for="location">Location</label>
         {{input value=location id="location"}}
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        {{input value=email id="email"}}
+        <label for="messages">Messages</label>
+        {{input value=messages id="messages"}}
       </div>
 
       <button {{action 'saveSignUp'}}>Sign up</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'signUpFormShow'}}>New Player</button>
+  <button {{action 'signUpFormShow'}}>New Team</button>
 {{/if}}
