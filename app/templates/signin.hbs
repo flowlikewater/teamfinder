@@ -1,0 +1,5 @@
+{{sign-up saveSignUpTeam="saveSignUpTeam"}}
+{{sign-up-player saveSignUpPlayer="saveSignUpPlayer"}}
+{{#each model.players as |player|}}
+  {{choose-user-list player=player}}
+{{/each}}

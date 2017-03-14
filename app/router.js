@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('sign-up-team');
   this.route('team',{path:'/team/:team_id'});
   this.route('player',{path:'/player/:player_id'});
+  this.route('signin');
 });
 
 export default Router;

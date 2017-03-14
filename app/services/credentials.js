@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  player: false,
-  name: "Tarul"
+  player: null,
+  name: null,
+  addPlayer(player){
+    this.set('name', player.get('name'));
+    debugger;
+  }
 });
