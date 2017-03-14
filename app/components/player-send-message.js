@@ -13,6 +13,7 @@ export default Ember.Component.extend({
        time: this.get('time'),
        team: this.get('team')
      };
+     debugger;
      this.set('openMessageForm', false);
      this.sendAction('sendMessage', params);
    }

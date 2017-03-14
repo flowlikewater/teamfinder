@@ -1,0 +1,20 @@
+<div>
+  <h2>Team Name: {{model.teams.name}}</h2>
+  <h3>Category: {{model.teams.category}}</h3>
+  <p>Total Players: {{model.teams.totalplayer}}</p>
+  <p>Players Wanted: {{model.teams.playerswanted}}</p>
+  <p>Age Range: {{model.teams.agerange}}</p>
+  <p>Location: {{model.teams.location}}</p>
+  <p>Description: {{model.teams.description}}</p>
+  {{#link-to 'player' 0}}Super-Sub{{/link-to}}
+</div>
+
+{{player-send-message sendMessage="sendMessage" team=model.teams}}
+
+{{#each model.teams.messages as |message|}}
+<div style="width:200px;border:1px solid red; margin:10px">
+<li>Message:{{message.message}}</li>
+<li>Time:{{message.time}}</li>
+<li>By {{message.name}}</li>
+</div>
+{{/each}}
