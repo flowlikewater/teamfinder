@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('basketball');
   this.route('bodybuilding');
   this.route('gym');
+  this.route('team',{path:'/team/:team_id'});
 });
 
 export default Router;
