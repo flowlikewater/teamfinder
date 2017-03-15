@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  credentials: Ember.inject.service(),
   signUpTeam: false,
   actions: {
     signUpFormShowTeam() {
@@ -19,7 +20,7 @@ export default Ember.Component.extend({
         location: this.get('location')
       };
       this.set('signUpTeam', false);
-      this.sendAction('saveSignUpTeam', params)
+      this.sendAction('saveSignUpTeam', params);
     }
   }
 });

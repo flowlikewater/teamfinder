@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  credentials: Ember.inject.service(),
   signUpPlayer: false,
   actions: {
     signUpFormShow() {
@@ -19,7 +20,7 @@ export default Ember.Component.extend({
         email: this.get('email')
       };
       this.set('signUpPlayer', false);
-      this.sendAction('saveSignUpPlayer', paramsplayer)
+      this.sendAction('saveSignUpPlayer', paramsplayer);
     }
   }
 });
