@@ -6,8 +6,14 @@
   <p>Age Range: {{model.teams.agerange}}</p>
   <p>Location: {{model.teams.location}}</p>
   <p>Description: {{model.teams.description}}</p>
-  {{#link-to 'player' '-KfA0gMPuUzYS03QWZS2'}}Super-Sub{{/link-to}}
+  <p>Teamm8s: {{model.teams.teammates}}</p>
 </div>
+
+<hr>
+
+{{bye-player teammates=model.teams.teammates deleteplayer="deleteplayer"}}
+
+<hr>
 
 {{edit-team}}
 {{add-team-member}}
@@ -15,9 +21,10 @@
 {{player-send-message sendMessage="sendMessage" team=model.teams}}
 
 {{#each model.teams.messages as |message|}}
-<div style="width:200px;border:1px solid red; margin:10px">
-<li>Message:{{message.message}}</li>
-<li>Time:{{message.time}}</li>
-<li>By {{message.name}}</li>
-</div>
+  <div style="width:200px;border:1px solid red; margin:10px">
+    <li>Message:{{message.message}}</li>
+    <li>Time:{{message.time}}</li>
+    <li>By {{message.name}}</li>
+    <button {{action 'changeplayer' message.name model.teams}}>Add player</button>
+  </div>
 {{/each}}
