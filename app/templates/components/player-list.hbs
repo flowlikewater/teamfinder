@@ -2,17 +2,19 @@
   {{#unless credentials.player}}
   <h3>List of players </h3>
   {{#each model.players as |player|}}
-  {{#link-to 'player' player.id}}
-    <h4>Player Name: {{player.name}}</h4>{{/link-to}}
-  <div class="col-md-6">
-    <p><b>Sex:</b> {{player.sex}}</p>
-    <p><b>Description:</b> {{player.description}}</p>
-  </div>
-  <div class="col-md-6">
-    <p><b>Build:</b> {{player.build}}</p>
-    <p><b>Age:</b> {{player.age}}</p>
-    <p><b>Location:</b> {{player.location}}</p>
-    <p><b>Email:</b> {{player.email}}</p>
+  <div class='row signin'>
+    <div class="col-md-6">
+      {{#link-to 'player' player.id}}
+      <h4>Player Name: {{player.name}}</h4>{{/link-to}}
+      <p><b>Sex:</b> {{player.sex}}</p>
+      <p><b>Description:</b> {{player.description}}</p>
+    </div>
+    <div class="col-md-6">
+      <p><b>Build:</b> {{player.build}}</p>
+      <p><b>Age:</b> {{player.age}}</p>
+      <p><b>Location:</b> {{player.location}}</p>
+      <p><b>Email:</b> {{player.email}}</p>
+    </div>
   </div>
   {{/each}}
   {{/unless}}

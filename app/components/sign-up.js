@@ -21,6 +21,11 @@ export default Ember.Component.extend({
       };
       this.set('signUpTeam', false);
       this.sendAction('saveSignUpTeam', params);
+      this.send('saveNewTeam');
+    },
+    saveNewTeam() {
+      this.get('credentials').newTeam();
+      this.sendAction('goHome');
     }
   }
 });
