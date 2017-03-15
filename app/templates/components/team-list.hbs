@@ -2,19 +2,21 @@
   {{#if credentials.player}}
   <h3>List of Teams </h3>
   {{#each model.teams as |team|}}
-  {{#link-to 'team' team.id}}
-  <h4>Team Name: {{team.name}}</h4>{{/link-to}}
-  <h4>Category: {{team.category}}</h4>
-  <div class="col-md-6">
-    <p><b>Total Players:</b> {{team.totalplayer}}</p>
-    <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
-  </div>
-  <div class="col-md-6">
-    <p><b>Age Range:</b> {{team.agerange}}</p>
-    <p><b>Location:</b> {{team.location}}</p>
-  </div>
-  <div class="col-md-12">
-    <p><b>Description:</b> {{team.description}}</p>
+  <div class='row signin'>
+    {{#link-to 'team' team.id}}
+    <h4>Team Name: {{team.name}}</h4>{{/link-to}}
+    <h4>Category: {{team.category}}</h4>
+    <div class="col-md-6">
+      <p><b>Total Players:</b> {{team.totalplayer}}</p>
+      <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
+    </div>
+    <div class="col-md-6">
+      <p><b>Age Range:</b> {{team.agerange}}</p>
+      <p><b>Location:</b> {{team.location}}</p>
+    </div>
+    <div class="col-md-12">
+      <p><b>Description:</b> {{team.description}}</p>
+    </div>
   </div>
   {{/each}}
   {{/if}}
