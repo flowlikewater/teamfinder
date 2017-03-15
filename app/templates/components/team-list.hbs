@@ -1,6 +1,5 @@
-
-{{#if credentials.player}}
 <div class="row">
+  {{#if credentials.player}}
   <h3>List of Teams </h3>
   {{#each model.teams as |team|}}
   {{#link-to 'team' team.id}}
@@ -18,5 +17,5 @@
     <p><b>Description:</b> {{team.description}}</p>
   </div>
   {{/each}}
+  {{/if}}
 </div>
-{{/if}}

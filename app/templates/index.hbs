@@ -1,18 +1,36 @@
-{{sign-up saveSignUpTeam="saveSignUpTeam"}}
-{{sign-up-player saveSignUpPlayer="saveSignUpPlayer"}}
-<div class="col-md-6">
-  {{#each model.players as |player|}}
-    <div class="col-md-3">
-      {{choose-user-list player=player}}
-    </div>
-  {{/each}}
+<div class="jumbotron">
+  <div class="container">
+  <center><h1>Please Sign-in Below</h1></center>
+  </div>
 </div>
-<div class="col-md-6">
-  {{#each model.teams as |team|}}
-    <div class="col-md-3">
-      {{choose-team-list team=team}}
-    </div>
-  {{/each}}
+<div class="container">
+  <div class="col-md-6">
+    <center>
+      {{sign-up-player saveSignUpPlayer="saveSignUpPlayer"}}
+    </center>
+  </div>
+  <div class="col-md-6">
+    <center>
+    {{sign-up saveSignUpTeam="saveSignUpTeam"}}
+    </center>
+  </div>
 </div>
-
-<button {{action 'signin'}}>Sign in</button>
+<br>
+  <div class="container">
+    <div class="col-md-6">
+      <center><h3> Existing Player Sign-in </h3></center>
+      {{#each model.players as |player|}}
+        <div class="col-md-3 signin">
+          {{choose-user-list player=player}}
+        </div>
+      {{/each}}
+    </div>
+    <div class="col-md-6">
+      <center><h3> Existing Team Sign-in </h3></center>
+      {{#each model.teams as |team|}}
+        <div class="col-md-3 signin">
+          {{choose-team-list team=team}}
+        </div>
+      {{/each}}
+    </div>
+  </div>

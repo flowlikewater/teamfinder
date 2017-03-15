@@ -43,9 +43,9 @@
         {{input value=messages id="messages"}}
       </div>
 
-      <button {{action 'saveSignUpTeam'}}>Sign up</button>
+      <button class="btn btn-primary" {{action 'saveSignUpTeam'}}>Sign up</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'signUpFormShowTeam'}}>New Team</button>
+  <button class="btn btn-primary" {{action 'signUpFormShowTeam'}}>New Team</button>
 {{/if}}
