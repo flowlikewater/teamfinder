@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  credentials: Ember.inject.service(),
+  credentials: Ember.inject.service('credentials'),
   model() {
     return Ember.RSVP.hash({
       teams: this.store.findAll('team'),
@@ -19,15 +19,5 @@ export default Ember.Route.extend({
         equalTo: 'football'
       })
     });
-  },
-  actions: {
-    saveSignUpTeam(params) {
-      var publishTeam = this.store.createRecord('team', params);
-      publishTeam.save();
-    },
-    saveSignUpPlayer(paramsplayer) {
-      var publishPlayer = this.store.createRecord('player', paramsplayer);
-      publishPlayer.save();
-    }
   }
 });
