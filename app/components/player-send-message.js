@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     },
     sendMessage() {
      var params = {
-       name: this.get('credentials.name'),
+       name: this.get('credentials.tempname'),
        message: this.get('message'),
        time: this.get('time'),
        team: this.get('team')

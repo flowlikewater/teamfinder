@@ -1,12 +1,15 @@
-{{#unless credentials.player}}
   <h3>Edit Team - form functionality to be added</h3>
   <form>
     <div class="form-group">
-      <label for="description">Description</label> {{input value=description id="description"}}
+      <label for="editname">Name</label>
+      {{input id="editname" value=team.name}}
     </div>
 
-    <button>Edit Team</button>
+    <div class="form-group">
+      <label for="playerswanted">Player Wanted</label>
+      {{input id="playerswanted" value=team.playerswanted}}
+    </div>
 
+    <button {{action 'editTeam' team}}>Edit Team</button>
 
   </form>
-{{/unless}}

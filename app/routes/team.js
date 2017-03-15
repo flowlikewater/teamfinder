@@ -23,22 +23,40 @@ export default Ember.Route.extend({
 
   actions: {
     sendMessage(params) {
-      var newMessage = this.store.createRecord('message',params);
+      var newMessage = this.store.createRecord('message', params);
       var team = params.team;
       team.get('messages').addObject(newMessage);
-      newMessage.save().then(function(){
+      newMessage.save().then(function() {
         return team.save();
-      })
-    },
-    changeplayer(messages, team){
-      var newteammate = this.store.findAll('player').then(function(teammates){
-
-        var filteredTeammates = teammates.filter(function(player){
-          return player.get('name') == messages;
-        });
-        team.get('teammates').push(filteredTeammates[0].get('name'));
-        team.save();
       });
     },
+    addplayer(messages, team, player) {
+      var newteammate = this.store.findAll('player').then(function(teammates) {
+        var filteredTeammates = teammates.filter(function(player) {
+          return player.get('name') === messages;
+        });
+        if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
+          return 0;
+        };
+        team.get('teammates').push(filteredTeammates[0].get('name'));
+        team.save();
+        filteredTeammates[0].get('joinedteams').push(team.get('name'));
+        player.save();
+      })
+    },
+    editTeam(team, params) {
+      team.save();
+    },
+    deleteteammate(teammate, team, player) {
+      team.get('teammates').removeObject(teammate);
+      team.save();
+      var deletethisguy = this.store.findAll('player').then(function(teammates) {
+        var filteredguys = teammates.filter(function(player) {
+          return player.get('name') === teammate;
+        });
+        filteredguys[0].get('joinedteams').removeObject(team.get('name'));
+        player.save();
+      });
+    }
   }
 });

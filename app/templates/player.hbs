@@ -3,6 +3,12 @@
 <div class="col-md-6">
   <p><b>Sex:</b> {{model.players.sex}}</p>
   <p><b>Description:</b> {{model.players.description}}</p>
+  <p><b>Joined Teams:</b></p>
+  <ol>
+  {{#each model.players.joinedteams as |joinedteam|}}
+    <li>{{joinedteam}}</li>
+  {{/each}}
+  </ol>
 </div>
 <div class="col-md-6">
   <p><b>Build:</b> {{model.players.build}}</p>

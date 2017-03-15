@@ -2,67 +2,13 @@
   "messages" : {
     "0" : {
       "message" : "1",
-      "name" : "pacelee",
+      "name" : "Pace Lee",
       "team" : "2",
       "time" : "1"
-    },
-    "1" : {
-      "message" : "1",
-      "name" : "Ken Ng",
-      "team" : "2",
-      "time" : "1"
-    },
-    "-KfB4hAU5S7zVKD-yWXQ" : {
-      "message" : "Hello",
-      "name" : "Messenger",
-      "team" : "2",
-      "time" : "Now"
-    },
-    "-KfB6zihZD4Q8a-Hr_1O" : {
-      "message" : "123",
-      "name" : "ken",
-      "team" : "3",
-      "time" : "123"
-    },
-    "-KfB7MaG7lyKOrmtLV5l" : {
-      "message" : "123",
-      "name" : "Ken",
-      "team" : "3",
-      "time" : "123"
-    },
-    "-KfB7RsXk_UdU91YWhkL" : {
-      "message" : "123",
-      "name" : "Tarul",
-      "team" : "3",
-      "time" : "123"
-    },
-    "-KfB7yXM-i-a77QRYNHi" : {
-      "message" : "wetyuyghgfd",
-      "name" : "Tarul",
-      "team" : "3",
-      "time" : "12:30"
-    },
-    "-KfCIRrtQjNJSFszNIW3" : {
-      "message" : "123",
-      "name" : "123",
-      "team" : "2",
-      "time" : "123"
-    },
-    "-KfCRWxsJpQvhOXbBllm" : {
-      "message" : "123",
-      "name" : "123",
-      "team" : "0",
-      "time" : "123"
     },
     "-KfCULX8Ipgx_nHzC_Gw" : {
       "message" : "1",
-      "name" : "123",
-      "team" : "2",
-      "time" : "1"
-    },
-    "-KfCXuXmYM7nMpKax0Ur" : {
-      "message" : "1",
-      "name" : "1",
+      "name" : "Ken Ng",
       "team" : "2",
       "time" : "1"
     }
@@ -77,7 +23,8 @@
       "loginid" : "pacer",
       "loginpassword" : "123ABC",
       "name" : "Pace Lee",
-      "sex" : "male"
+      "sex" : "male",
+      "joinedteams" : ["Honkie UTD!","Spaghetti Monsters", "Fresh Meat", "Get Big", "Swag FC", "Team HK"]
     },
     "1" : {
       "age" : "25",
@@ -88,9 +35,10 @@
       "loginid" : "demiken",
       "loginpassword" : "123ABC",
       "name" : "Ken Ng",
-      "sex" : "male"
+      "sex" : "male",
+      "joinedteams" : ["Honkie UTD!","Spaghetti Monsters", "Fresh Meat", "Swag FC", "Team HK"]
     },
-    "-KfASk9B-fwpCyfAOP64" : {
+    "2" : {
       "age" : "25",
       "build" : "thin",
       "description" : "Looking for a football team",
@@ -99,18 +47,8 @@
       "loginid" : "tghk",
       "loginpassword" : "12345678",
       "name" : "Taral",
-      "sex" : "Male"
-    },
-    "-KfF8FpbukFO1737d4pZ" : {
-      "age" : "20",
-      "build" : "Big",
-      "description" : "I am John. John is strong",
-      "email" : "john@big.com",
-      "location" : "Wan Chai",
-      "loginid" : "johntheman",
-      "loginpassword" : "dontmatter",
-      "name" : "John",
-      "sex" : "Yes"
+      "sex" : "Male",
+      "joinedteams" : ["Honkie UTD!"]
     }
   },
   "teams" : {
@@ -127,7 +65,7 @@
       "name" : "Swag FC",
       "playerswanted" : 1,
       "totalplayers" : 7,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "1" : {
       "agerange" : "25 to 50",
@@ -139,7 +77,7 @@
       "name" : "Team HK",
       "playerswanted" : 2,
       "totalplayers" : 6,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "2" : {
       "agerange" : "10 to 16",
@@ -157,7 +95,7 @@
       "name" : "Spaghetti Monsters",
       "playerswanted" : 2,
       "totalplayers" : 3,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "3" : {
       "agerange" : "23 to 45",
@@ -175,7 +113,7 @@
       "name" : "Fresh Meat",
       "playerswanted" : 3,
       "totalplayers" : 2,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "4" : {
       "agerange" : "23 to 26",
@@ -187,7 +125,7 @@
       "name" : "Get Big",
       "playerswanted" : 1,
       "totalplayers" : 1,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "5" : {
       "agerange" : "30 to 35",
@@ -199,7 +137,7 @@
       "name" : "Skip Leg Day",
       "playerswanted" : 1,
       "totalplayers" : 1,
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     },
     "-KfASY3jTmOcAGVkV4UT" : {
       "agerange" : "17-38",
@@ -211,7 +149,7 @@
       "name" : "Honkie UTD",
       "playerswanted" : "2",
       "totalplayers" : "8",
-      "teammates": ["test"]
+      "teammates": ["Pace Lee","Ken Ng"]
     }
   }
 }

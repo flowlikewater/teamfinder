@@ -9,5 +9,6 @@ export default DS.Model.extend({
   build: DS.attr(),
   age: DS.attr(),
   location: DS.attr(),
+  joinedteams: DS.attr(),
   email: DS.attr()
 });
