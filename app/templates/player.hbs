@@ -16,3 +16,19 @@
   <p><b>Location:</b> {{model.players.location}}</p>
   <p><b>Email:</b> {{model.players.email}}</p>
 </div>
+
+
+{{team-send-message sendMessage="sendMessage" player=model.players}}
+
+<hr>
+<br>
+<br>
+
+
+{{#each model.players.messages as |message|}}
+  <div style="width:200px;border:1px solid red; margin:10px">
+    <p>Message:{{message.message}}</p>
+    <p>Time:{{message.time}}</p>
+    <p>By {{message.name}}</p>
+  </div>
+{{/each}}

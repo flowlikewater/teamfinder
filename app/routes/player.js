@@ -23,10 +23,10 @@ export default Ember.Route.extend({
   actions: {
     sendMessage(params) {
       var newMessage = this.store.createRecord('message',params);
-      var team = params.team;
-      team.get('messages').addObject(newMessage);
+      var player = params.player;
+      player.get('messages').addObject(newMessage);
       newMessage.save().then(function(){
-        return team.save();
+        return player.save();
       });
     }
   }

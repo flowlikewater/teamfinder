@@ -4,13 +4,15 @@
       "message" : "1",
       "name" : "Pace Lee",
       "team" : "2",
-      "time" : "1"
+      "time" : "1",
+      "teamtoplayer" : false
     },
     "-KfCULX8Ipgx_nHzC_Gw" : {
       "message" : "1",
       "name" : "Ken Ng",
       "team" : "2",
-      "time" : "1"
+      "time" : "1",
+      "teamtoplayer" : false
     }
   },
   "players" : {

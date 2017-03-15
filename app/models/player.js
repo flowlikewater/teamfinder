@@ -10,5 +10,6 @@ export default DS.Model.extend({
   age: DS.attr(),
   location: DS.attr(),
   joinedteams: DS.attr(),
-  email: DS.attr()
+  email: DS.attr(),
+  messages: DS.hasMany('message', {async: true})
 });
