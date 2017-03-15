@@ -28,6 +28,9 @@ export default Ember.Route.extend({
     saveSignUpPlayer(paramsplayer) {
       var publishPlayer = this.store.createRecord('player', paramsplayer);
       publishPlayer.save();
+    },
+    signin(){
+      this.transitionTo('homepage');
     }
   }
 });

@@ -1,1 +1,28 @@
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+  {{#link-to 'homepage' class="navbar-brand"}}Team Finder{{/link-to}}
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">{{#link-to 'homepage'}}HOME{{/link-to}}</li>
+      <li>{{#link-to 'homepage'}}ABOUT{{/link-to}}</li>
+      <li>{{#link-to 'homepage'}}INBOX{{/link-to}}</li>
+      <li>{{#link-to 'homepage'}}PROFILE{{/link-to}}</li>
+      <li>{{#link-to 'homepage'}}TEAM{{/link-to}}</li>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{#link-to 'sign-up-player'}}Register (Player){{/link-to}}</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span>{{#link-to 'sign-up-team'}}Register (Team){{/link-to}}</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>{{#link-to 'signin'}}SIGN IN{{/link-to}}</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+{{view-credentials}}
+<hr>
+
 {{outlet}}
