@@ -1,44 +1,26 @@
-{{log credentials.loggedin}}
+<nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+   <div class="navbar-header">
+ {{#link-to 'homepage' class="navbar-brand"}}Team Finder{{/link-to}}
+   </div>
+   <ul class="nav navbar-nav">
+     <li>{{#link-to 'homepage'}}HOME{{/link-to}}</li>
+     <li>{{#link-to 'homepage'}}ABOUT{{/link-to}}</li>
+     <li>{{#link-to 'homepage'}}PROFILE{{/link-to}}</li>
+     <li>{{#link-to 'homepage'}}TEAM{{/link-to}}</li>
+   </ul>
+ </div>
+</nav>
+<!-- {{dropdown-filter}} -->
 
-<div class="col-md-6">
-<h3>Find Team </h3>
-<h5> Dropdown sport</h5>
-<select class="sport">
-  <option value="football">Football</option>
-  <option value="basketball">Basketball</option>
-  <option value="gym">Gym</option>
-</select>
-<h5> Dropdown location</h5>
-<select class="location">
-  <option value="hkisland">HK Island</option>
-  <option value="kowloon">Kowloon</option>
-  <option value="newterritories">New Territories</option>
-</select>
-<button class="btn">Search</button>
-
-<hr>
-
-  <h4> Categories</h4>
-  {{#link-to 'football'}}<h5> Football (100)</h5>{{/link-to}}
-  {{#link-to 'basketball'}}<h5> Basketball (140)</h5>{{/link-to}}
-  {{#link-to 'gym'}}<h5> Gym (60)</h5>{{/link-to}}
-
-<h3>List of players </h3>
-{{#each model.players as |player|}}
-  {{player-list model=player}}
-{{/each}}
-
+<div class="container">
+  <div class="col-md-12">
+    {{player-list model=model}}
+  </div>
 </div>
 
-<div class="col-md-6">
-<h3>Statement of Purpose </h3>
-<h4>* Taking the HK sports scene to the next level </h4>
-<h4>* Connecting Players to Teams </h4>
-<h4>* Connecting Teams with Teams </h4>
-<hr>
-
-<h3>List of Teams </h3>
-{{#each model.teams as |team|}}
-  {{team-list model=team}}
-{{/each}}
+<div class="container">
+  <div class="col-md-12">
+    {{team-list model=model}}
+  </div>
 </div>

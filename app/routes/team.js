@@ -27,7 +27,7 @@ export default Ember.Route.extend({
       team.get('messages').addObject(newMessage);
       newMessage.save().then(function(){
         return team.save();
-      })
+      });
     }
   }
 });
