@@ -20,6 +20,7 @@ export default Ember.Route.extend({
       })
     });
   },
+
   actions: {
     sendMessage(params) {
       var newMessage = this.store.createRecord('message',params);
@@ -27,7 +28,17 @@ export default Ember.Route.extend({
       team.get('messages').addObject(newMessage);
       newMessage.save().then(function(){
         return team.save();
+      })
+    },
+    changeplayer(messages, team){
+      var newteammate = this.store.findAll('player').then(function(teammates){
+
+        var filteredTeammates = teammates.filter(function(player){
+          return player.get('name') == messages;
+        });
+        team.get('teammates').push(filteredTeammates[0].get('name'));
+        team.save();
       });
-    }
+    },
   }
 });

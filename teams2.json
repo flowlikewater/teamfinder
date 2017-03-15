@@ -1,0 +1,217 @@
+{
+  "messages" : {
+    "0" : {
+      "message" : "1",
+      "name" : "pacelee",
+      "team" : "2",
+      "time" : "1"
+    },
+    "1" : {
+      "message" : "1",
+      "name" : "Ken Ng",
+      "team" : "2",
+      "time" : "1"
+    },
+    "-KfB4hAU5S7zVKD-yWXQ" : {
+      "message" : "Hello",
+      "name" : "Messenger",
+      "team" : "2",
+      "time" : "Now"
+    },
+    "-KfB6zihZD4Q8a-Hr_1O" : {
+      "message" : "123",
+      "name" : "ken",
+      "team" : "3",
+      "time" : "123"
+    },
+    "-KfB7MaG7lyKOrmtLV5l" : {
+      "message" : "123",
+      "name" : "Ken",
+      "team" : "3",
+      "time" : "123"
+    },
+    "-KfB7RsXk_UdU91YWhkL" : {
+      "message" : "123",
+      "name" : "Tarul",
+      "team" : "3",
+      "time" : "123"
+    },
+    "-KfB7yXM-i-a77QRYNHi" : {
+      "message" : "wetyuyghgfd",
+      "name" : "Tarul",
+      "team" : "3",
+      "time" : "12:30"
+    },
+    "-KfCIRrtQjNJSFszNIW3" : {
+      "message" : "123",
+      "name" : "123",
+      "team" : "2",
+      "time" : "123"
+    },
+    "-KfCRWxsJpQvhOXbBllm" : {
+      "message" : "123",
+      "name" : "123",
+      "team" : "0",
+      "time" : "123"
+    },
+    "-KfCULX8Ipgx_nHzC_Gw" : {
+      "message" : "1",
+      "name" : "123",
+      "team" : "2",
+      "time" : "1"
+    },
+    "-KfCXuXmYM7nMpKax0Ur" : {
+      "message" : "1",
+      "name" : "1",
+      "team" : "2",
+      "time" : "1"
+    }
+  },
+  "players" : {
+    "0" : {
+      "age" : "25",
+      "build" : "fat",
+      "description" : "I love football, seeking a return to the game after a year out in NZ. Played in my early twenties in the UK.",
+      "email" : "bigfatpace@hotmail.com",
+      "location" : "wan chai",
+      "loginid" : "pacer",
+      "loginpassword" : "123ABC",
+      "name" : "Pace Lee",
+      "sex" : "male"
+    },
+    "1" : {
+      "age" : "25",
+      "build" : "demi-god",
+      "description" : "I love to gym, leg-day every day.",
+      "email" : "kenthedemigod@hotmail.com",
+      "location" : "wan chai",
+      "loginid" : "demiken",
+      "loginpassword" : "123ABC",
+      "name" : "Ken Ng",
+      "sex" : "male"
+    },
+    "-KfASk9B-fwpCyfAOP64" : {
+      "age" : "25",
+      "build" : "thin",
+      "description" : "Looking for a football team",
+      "email" : "tg@xyz.com",
+      "location" : "Kowloon",
+      "loginid" : "tghk",
+      "loginpassword" : "12345678",
+      "name" : "Taral",
+      "sex" : "Male"
+    },
+    "-KfF8FpbukFO1737d4pZ" : {
+      "age" : "20",
+      "build" : "Big",
+      "description" : "I am John. John is strong",
+      "email" : "john@big.com",
+      "location" : "Wan Chai",
+      "loginid" : "johntheman",
+      "loginpassword" : "dontmatter",
+      "name" : "John",
+      "sex" : "Yes"
+    }
+  },
+  "teams" : {
+    "0" : {
+      "agerange" : "18 to 35",
+      "category" : "football",
+      "description" : "team-swag is hong kong's most prestegious football club",
+      "location" : "wan chai",
+      "loginid" : "swagger",
+      "loginpassword" : "123ABC",
+      "messages" : {
+        "-KfCRWxsJpQvhOXbBllm" : true
+      },
+      "name" : "Swag FC",
+      "playerswanted" : 1,
+      "totalplayers" : 7,
+      "teammates": ["test"]
+    },
+    "1" : {
+      "agerange" : "25 to 50",
+      "category" : "football",
+      "description" : "team-hk consists of the best of the best players",
+      "location" : "kowloon",
+      "loginid" : "teamhk",
+      "loginpassword" : "123ABC",
+      "name" : "Team HK",
+      "playerswanted" : 2,
+      "totalplayers" : 6,
+      "teammates": ["test"]
+    },
+    "2" : {
+      "agerange" : "10 to 16",
+      "category" : "basketball",
+      "description" : "team spaghetti monsters is a young basketball team",
+      "location" : "central",
+      "loginid" : "monsters123",
+      "loginpassword" : "123ABC",
+      "messages" : {
+        "1" : true,
+        "-KfB4hAU5S7zVKD-yWXQ" : true,
+        "-KfCIRrtQjNJSFszNIW3" : true,
+        "-KfCULX8Ipgx_nHzC_Gw" : true
+      },
+      "name" : "Spaghetti Monsters",
+      "playerswanted" : 2,
+      "totalplayers" : 3,
+      "teammates": ["test"]
+    },
+    "3" : {
+      "agerange" : "23 to 45",
+      "category" : "basketball",
+      "description" : "i am pace, the leader of the fresh meat club, we are the bestest",
+      "location" : "wan chai",
+      "loginid" : "littlemeat",
+      "loginpassword" : "123ABC",
+      "messages" : {
+        "-KfB6zihZD4Q8a-Hr_1O" : true,
+        "-KfB7MaG7lyKOrmtLV5l" : true,
+        "-KfB7RsXk_UdU91YWhkL" : true,
+        "-KfB7yXM-i-a77QRYNHi" : true
+      },
+      "name" : "Fresh Meat",
+      "playerswanted" : 3,
+      "totalplayers" : 2,
+      "teammates": ["test"]
+    },
+    "4" : {
+      "agerange" : "23 to 26",
+      "category" : "gym",
+      "description" : "creatine is my god",
+      "location" : "central",
+      "loginid" : "letsgetbig",
+      "loginpassword" : "123ABC",
+      "name" : "Get Big",
+      "playerswanted" : 1,
+      "totalplayers" : 1,
+      "teammates": ["test"]
+    },
+    "5" : {
+      "agerange" : "30 to 35",
+      "category" : "gym",
+      "description" : "training legs is a waste of time",
+      "location" : "wan chai",
+      "loginid" : "legday0",
+      "loginpassword" : "123ABC",
+      "name" : "Skip Leg Day",
+      "playerswanted" : 1,
+      "totalplayers" : 1,
+      "teammates": ["test"]
+    },
+    "-KfASY3jTmOcAGVkV4UT" : {
+      "agerange" : "17-38",
+      "category" : "Basketball",
+      "description" : "Looking for players",
+      "location" : "Kowloon",
+      "loginid" : "HKutd",
+      "loginpassword" : "12345678",
+      "name" : "Honkie UTD",
+      "playerswanted" : "2",
+      "totalplayers" : "8",
+      "teammates": ["test"]
+    }
+  }
+}

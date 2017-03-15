@@ -10,5 +10,6 @@ export default DS.Model.extend({
   playerswanted: DS.attr(),
   agerange: DS.attr(),
   location: DS.attr(),
+  teammates: DS.attr(),
   messages: DS.hasMany('message', {async: true})
 });
