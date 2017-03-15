@@ -19,7 +19,7 @@ export default Ember.Component.extend({
         location: this.get('location')
       };
       this.set('signUpTeam', false);
-      this.sendAction('saveSignUpTeam', params)
+      this.sendAction('saveSignUpTeam', params);
     }
   }
 });

@@ -1,12 +1,16 @@
 {{sign-up saveSignUpTeam="saveSignUpTeam"}}
 {{sign-up-player saveSignUpPlayer="saveSignUpPlayer"}}
 <div class="col-md-6">
-{{#each model.players as |player|}}
-  {{choose-user-list player=player}}
-{{/each}}
+  {{#each model.players as |player|}}
+    <div class="col-md-3">
+      {{choose-user-list player=player}}
+    </div>
+  {{/each}}
 </div>
 <div class="col-md-6">
   {{#each model.teams as |team|}}
-    {{choose-team-list team=team}}
+    <div class="col-md-3">
+      {{choose-team-list team=team}}
+    </div>
   {{/each}}
 </div>

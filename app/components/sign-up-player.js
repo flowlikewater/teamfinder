@@ -19,7 +19,7 @@ export default Ember.Component.extend({
         email: this.get('email')
       };
       this.set('signUpPlayer', false);
-      this.sendAction('saveSignUpPlayer', paramsplayer)
+      this.sendAction('saveSignUpPlayer', paramsplayer);
     }
   }
 });

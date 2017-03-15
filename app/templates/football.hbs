@@ -1,7 +1,5 @@
-{{#if credentials.loggedin}}
 <div class="container">
 {{#each model.football as |team|}}
-  {{team-list model=team}}
+  {{team-list model=model}}
 {{/each}}
 </div>
-{{/if}}
