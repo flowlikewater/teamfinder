@@ -21,6 +21,11 @@ export default Ember.Component.extend({
       };
       this.set('signUpPlayer', false);
       this.sendAction('saveSignUpPlayer', paramsplayer);
+      this.send('saveNewPlayer');
+    },
+    saveNewPlayer() {
+      this.get('credentials').newPlayer();
+      this.sendAction('goHome');
     }
   }
 });

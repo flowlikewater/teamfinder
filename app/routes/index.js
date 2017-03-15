@@ -24,12 +24,17 @@ export default Ember.Route.extend({
     saveSignUpTeam(params) {
       var publishTeam = this.store.createRecord('team', params);
       publishTeam.save();
+      this.send('goHome');
     },
     saveSignUpPlayer(paramsplayer) {
       var publishPlayer = this.store.createRecord('player', paramsplayer);
       publishPlayer.save();
+      this.send('goHome');
     },
     signin(){
+      this.transitionTo('homepage');
+    },
+    goHome(){
       this.transitionTo('homepage');
     }
   }
