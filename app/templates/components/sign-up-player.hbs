@@ -38,10 +38,11 @@
         <label for="email">Email</label>
         {{input value=email id="email"}}
       </div>
-
-      <button {{action 'saveSignUpPlayer'}}>Sign up</button>
+      {{#link-to 'homepage'}}
+      <button class="btn btn-primary" {{action 'saveSignUpPlayer'}}>Sign up</button>
+      {{/link-to}}
     </form>
   </div>
 {{else}}
-  <button {{action 'signUpFormShow'}}>New Player</button>
+  <button class="btn btn-primary" {{action 'signUpFormShow'}}>New Player</button>
 {{/if}}

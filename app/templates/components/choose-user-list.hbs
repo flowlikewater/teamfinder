@@ -1,7 +1,5 @@
-<div style='border: 1px solid black; display: inline-block; height: 100px; width: 100px'>
-  <h5>{{player.name}}</h5>
-  {{player.loginid}}
+  <h5>Name:</h5> {{player.name}}
+  <h5>Login ID:</h5> {{player.loginid}}
   {{#link-to 'homepage'}}
-  <button {{action "selectUser" player}}>Sign In</button>
+  <button class="btn btn-primary" {{action "selectUser" player}}>Sign In</button>
   {{/link-to}}
-</div>

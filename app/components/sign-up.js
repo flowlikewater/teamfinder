@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  credentials: Ember.inject.service(),
   signUpTeam: false,
   actions: {
     signUpFormShowTeam() {
