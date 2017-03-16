@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     },
     saveNewTeam() {
       this.get('credentials').newTeam();
-      this.sendAction('goHome');
+      alert("Your account has now been created, please sign in");
     }
   }
 });
