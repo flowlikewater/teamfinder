@@ -4,7 +4,9 @@ export default Ember.Component.extend({
   credentials: Ember.inject.service(),
   actions: {
     gotoprofile(){
-      this.transitionTo('team','1');
+      var isplayer = this.get('credentials.player');
+      var params = this.get('credentials.tempid');
+      this.sendAction('transTo', isplayer , params);
     }
   }
 });
