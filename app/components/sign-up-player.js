@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     },
     saveNewPlayer() {
       this.get('credentials').newPlayer();
-      this.sendAction('goHome');
+      alert("Your account has now been created, please sign in");
     }
   }
 });
