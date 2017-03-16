@@ -13,7 +13,6 @@ export default Ember.Component.extend({
        message: this.get('message'),
        time: this.get('time'),
        team: this.get('team'),
-       teamtoplayer: false
      };
      this.set('openMessageForm', false);
      this.sendAction('sendMessage', params);
