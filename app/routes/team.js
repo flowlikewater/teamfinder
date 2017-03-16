@@ -35,13 +35,29 @@ export default Ember.Route.extend({
         var filteredTeammates = teammates.filter(function(player) {
           return player.get('name') === messages;
         });
-        if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
+        if(team.get('teammates')==null){
+            team.teammates = [filteredTeammates[0].get('name')];
+            team.save();
+            if (filteredTeammates[0].get('joinedteams')==null){
+              filteredTeammates[0].joinedteams = [team.get('name')];
+              player.save();
+            }
+        }
+        else if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
           return 0;
         }
-        team.get('teammates').push(filteredTeammates[0].get('name'));
-        team.save();
-        filteredTeammates[0].get('joinedteams').push(team.get('name'));
-        player.save();
+        else {
+          team.get('teammates').push(filteredTeammates[0].get('name'));
+          team.save();
+          if (filteredTeammates[0].get('joinedteams')==null){
+            filteredTeammates[0].joinedteams = [team.get('name')];
+            player.save();
+          }
+          else {
+            filteredTeammates[0].get('joinedteams').push(team.get('name'));
+            player.save();
+          }
+        }
       });
     },
     editTeam(team, params) {

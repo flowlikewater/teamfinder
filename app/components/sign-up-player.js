@@ -17,7 +17,8 @@ export default Ember.Component.extend({
         build: this.get('build'),
         age: this.get('age'),
         location: this.get('location'),
-        email: this.get('email')
+        email: this.get('email'),
+        joinedteams: []
       };
       this.set('signUpPlayer', false);
       this.sendAction('saveSignUpPlayer', paramsplayer);

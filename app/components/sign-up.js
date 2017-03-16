@@ -17,7 +17,8 @@ export default Ember.Component.extend({
         totalplayers: this.get('totalplayers'),
         playerswanted: this.get('playerswanted'),
         agerange: this.get('agerange'),
-        location: this.get('location')
+        location: this.get('location'),
+        teammates: []
       };
       this.set('signUpTeam', false);
       this.sendAction('saveSignUpTeam', params);
