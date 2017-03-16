@@ -37,12 +37,12 @@ export default Ember.Route.extend({
         });
         if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
           return 0;
-        };
+        }
         team.get('teammates').push(filteredTeammates[0].get('name'));
         team.save();
         filteredTeammates[0].get('joinedteams').push(team.get('name'));
         player.save();
-      })
+      });
     },
     editTeam(team, params) {
       team.save();
@@ -56,6 +56,17 @@ export default Ember.Route.extend({
         });
         filteredguys[0].get('joinedteams').removeObject(team.get('name'));
         player.save();
+      });
+    },
+    linktoteammate(teammate, player) {
+      var self=this;
+      var linktothisguy = this.store.findAll('player').then(function(teammates) {
+        var filteredguys = teammates.filter(function(player) {
+          return player.get('name') === teammate;
+        });
+        debugger;
+        var i = filteredguys[0].get('id');
+        self.transitionTo('player', i);
       });
     }
   }

@@ -6,7 +6,7 @@
   <p><b>Joined Teams:</b></p>
   <ol>
   {{#each model.players.joinedteams as |joinedteam|}}
-    <li>{{joinedteam}}</li>
+    <li><a{{action "linktoteam" joinedteam model.teams}}>{{joinedteam}}</a></li>
   {{/each}}
   </ol>
 </div>

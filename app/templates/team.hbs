@@ -6,13 +6,13 @@
   <p>Age Range: {{model.teams.agerange}}</p>
   <p>Location: {{model.teams.location}}</p>
   <p>Description: {{model.teams.description}}</p>
-  <p>Teamm8s: {{model.teams.teammates}}</p>
+  <p>Team mates:</p>
 </div>
 
 <ol>
   {{#each model.teams.teammates as |teammate|}}
-    <h1>{{teammate}}</h1>
-    <button {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button>
+    <li><a{{action "linktoteammate" teammate model.players}}>{{teammate}}</a>
+      <button {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button></li>
   {{/each}}
 </ol>
 <hr>

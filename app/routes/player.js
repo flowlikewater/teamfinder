@@ -28,6 +28,17 @@ export default Ember.Route.extend({
       newMessage.save().then(function(){
         return player.save();
       });
+    },
+    linktoteam(joinedteam, team) {
+      var self=this;
+      var linktothisteam = this.store.findAll('team').then(function(joinedteams) {
+        var filteredteams = joinedteams.filter(function(team) {
+          return team.get('name') === joinedteam;
+        });
+        debugger;
+        var i = filteredteams[0].get('id');
+        self.transitionTo('team', i);
+      });
     }
   }
 });
