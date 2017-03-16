@@ -11,9 +11,10 @@ export default Ember.Component.extend({
      var params = {
        name: this.get('credentials.tempname'),
        message: this.get('message'),
-       time: this.get('time'),
+       time: moment().format('lll'),
        team: this.get('team'),
      };
+     debugger;
      this.set('openMessageForm', false);
      this.sendAction('sendMessage', params);
    }
