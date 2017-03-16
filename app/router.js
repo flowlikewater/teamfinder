@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('team',{path:'/team/:team_id'});
   this.route('player',{path:'/player/:player_id'});
   this.route('homepage');
+  this.route('seeallteams');
 });
 
 export default Router;

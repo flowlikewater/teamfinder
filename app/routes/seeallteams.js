@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  credentials: Ember.inject.service('credentials'),
   model() {
     return Ember.RSVP.hash({
       teams: this.store.findAll('team'),
@@ -18,15 +17,6 @@ export default Ember.Route.extend({
         orderBy: 'category',
         equalTo: 'football'
       })
-    });
-  },
-  actions: {
-    transTo(isplayer, params) {
-      if (isplayer === true) {
-        this.transitionTo('player', params);
-      } else {
-        this.transitionTo('team', params);
-      }
-    }
+    })
   }
 });
