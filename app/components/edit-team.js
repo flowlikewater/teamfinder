@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   credentials: Ember.inject.service(),
+  editteamnow: false,
   actions:{
     editTeam(team) {
       var params = {
@@ -16,6 +17,9 @@ export default Ember.Component.extend({
         location: this.get('location')
       };
       this.sendAction('editTeam',team, params);
+    },
+    showformyo(){
+      this.set('editteamnow',true)
     }
   }
 });
