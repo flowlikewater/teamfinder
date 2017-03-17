@@ -9,6 +9,9 @@ export default Ember.Component.extend({
       if (this.get('credentials').get('password') === enterpasswordyo) {
         this.set('correctUser', true);
       }
+      else {
+        alert('Wrong Password')
+      }
     }
   }
 });
