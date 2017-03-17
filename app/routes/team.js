@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  credentials: Ember.inject.service(),
   model(params) {
     return Ember.RSVP.hash({
       teams: this.store.findRecord('team', params.team_id),
