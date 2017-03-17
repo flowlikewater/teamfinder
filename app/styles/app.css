@@ -2,7 +2,12 @@
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
-  border: 2px solid #000000;
+  border: 2px solid rgb(205, 135, 0);
+  height: 120px;
+}
+
+.lower {
+  margin-top: 45px;
 }
 
 .video {
@@ -45,6 +50,13 @@ input {
 body {
   background-color: #1c1c1c;
   color: rgb(226, 226, 226);
+  padding-top: 70px;
+}
+
+.orangebox {
+  width:200px;
+  border:1px solid rgb(205, 135, 0);
+  margin:10px;
 }
 
 .categoryimage {
