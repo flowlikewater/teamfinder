@@ -17,6 +17,7 @@ export default Ember.Component.extend({
         location: this.get('location')
       };
       this.sendAction('editTeam',team, params);
+      this.set('editteamnow',false)
     },
     showformyo(){
       this.set('editteamnow',true)
