@@ -1,5 +1,6 @@
 {{nav-bar transTo="transTo"}}
 
+<div class="col-md-6">
 <div>
   <h2>Team Name: {{model.teams.name}}</h2>
   <h3>Category: {{model.teams.category}}</h3>
@@ -18,7 +19,7 @@
   {{/each}}
 </ol>
 <hr>
-
+{{creds.player}}
 <hr>
 
 {{edit-team team=model.teams editTeam="editTeam"}}
@@ -33,3 +34,9 @@
     <button {{action 'addplayer' message.name model.teams model.players}}>Add player</button>
   </div>
 {{/each}}
+
+</div>
+
+<div class="col-md-6">
+{{set-formation team=model.teams}}
+</div>
