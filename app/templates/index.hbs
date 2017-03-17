@@ -1,20 +1,22 @@
-<div class="jumbotron">
-  <div class="container">
-  <center><h1>Team Finder</h1>
-  <br><p>Please Sign Up or Sign In Below!</p></center>
-  <div class="container">
-    <div class="col-md-6">
-      <center>
+<div class="main jumbotron">
+  <div class="container whitetext">
+    <div class="row">
+      <div class="col-md-4 center">
         {{sign-up-player saveSignUpPlayer="saveSignUpPlayer"}}
-      </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <h1>Team Finder</h1>
+          <br>
+          <p>Please Sign Up or Sign In Below!</p>
+        </center>
+      </div>
+      <div class="col-md-4 center">
+        {{sign-up saveSignUpTeam="saveSignUpTeam"}}
+      </div>
     </div>
-    <div class="col-md-6">
-      <center>
-      {{sign-up saveSignUpTeam="saveSignUpTeam"}}
-      </center>
-    </div>
-  </div>
-  <!-- <div class="row">
+
+    <!-- <div class="row">
    <div class="col-md-4">
       <video class="video2"  autoplay loop>
         <source src="asset/video/Kayak - 7559.mp4" type="video/mp4">
@@ -31,31 +33,31 @@
       </video>
    </div>
   </div> -->
-</div>
+  </div>
 </div>
 
-<hr>
-
-{{match-password}}
+<hr> {{match-password}}
 
 <hr>
 
 <br>
-  <div class="container">
-    <div class="col-md-6">
-      <center><h3> Existing Player Sign-in </h3></center>
-      {{#each model.players as |player|}}
-        <div class="col-md-3 signin">
-          {{choose-user-list player=player}}
-        </div>
-      {{/each}}
-    </div>
-    <div class="col-md-6">
-      <center><h3> Existing Team Sign-in </h3></center>
-      {{#each model.teams as |team|}}
-        <div class="col-md-3 signin">
-          {{choose-team-list team=team}}
-        </div>
-      {{/each}}
-    </div>
+<div class="container">
+  <div class="col-md-6">
+    <center>
+      <h3> Existing Player Sign-in </h3></center>
+    {{#each model.players as |player|}}
+      <div class="col-md-3 signin">
+        {{choose-user-list player=player}}
+      </div>
+    {{/each}}
   </div>
+  <div class="col-md-6">
+    <center>
+      <h3> Existing Team Sign-in </h3></center>
+    {{#each model.teams as |team|}}
+      <div class="col-md-3 signin">
+        {{choose-team-list team=team}}
+      </div>
+    {{/each}}
+  </div>
+</div>

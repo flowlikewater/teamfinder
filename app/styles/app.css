@@ -19,3 +19,30 @@
   width:65px;
   height:70px;
 }
+
+.main {
+  background: url(https://s3.amazonaws.com/codecademy-content/projects/2/move-gear/bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
+.whitetext {
+  color:white;
+}
+
+.center {
+  text-align: center;
+}
+
+.indexform {
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: rgb(226, 226, 226);
+}
