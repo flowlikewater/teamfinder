@@ -23,6 +23,9 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    test(){
+      debugger;
+    },
     sendMessage(params) {
       var newMessage = this.store.createRecord('message', params);
       var team = params.team;
@@ -32,39 +35,45 @@ export default Ember.Route.extend({
       });
     },
     addplayer(messages, team, player) {
-      var newteammate = this.store.findAll('player').then(function(teammates) {
-        var filteredTeammates = teammates.filter(function(player) {
-          return player.get('name') === messages;
-        });
-        if(team.get('teammates')==null){
-            team.teammates = [filteredTeammates[0].get('name')];
-            team.save();
-            if (filteredTeammates[0].get('joinedteams')==null){
-              filteredTeammates[0].joinedteams = [team.get('name')];
-              player.save();
+      if (((this.get('credentials.player')) === false) && (this.get('credentials.tempid')) === (team.id)) {
+          var newteammate = this.store.findAll('player').then(function(teammates) {
+            var filteredTeammates = teammates.filter(function(player) {
+              return player.get('name') === messages;
+            });
+            if(team.get('teammates')==null){
+                team.teammates = [filteredTeammates[0].get('name')];
+                team.save();
+                if (filteredTeammates[0].get('joinedteams')==null){
+                  filteredTeammates[0].joinedteams = [team.get('name')];
+                  player.save();
+                }
             }
-        }
-        else if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
-          return 0;
-        }
-        else {
-          team.get('teammates').push(filteredTeammates[0].get('name'));
-          team.save();
-          if (filteredTeammates[0].get('joinedteams')==null){
-            filteredTeammates[0].joinedteams = [team.get('name')];
-            player.save();
-          }
-          else {
-            filteredTeammates[0].get('joinedteams').push(team.get('name'));
-            player.save();
-          }
+            else if (team.get('teammates').includes(filteredTeammates[0].get('name'))) {
+              return 0;
+            }
+            else {
+              team.get('teammates').push(filteredTeammates[0].get('name'));
+              team.save();
+              if (filteredTeammates[0].get('joinedteams')==null){
+                filteredTeammates[0].joinedteams = [team.get('name')];
+                player.save();
+              }
+              else {
+                filteredTeammates[0].get('joinedteams').push(team.get('name'));
+                player.save();
+              }
         }
       });
-    },
+    }
+        else {
+          alert('This is not your team');
+        }
+      },
     editTeam(team, params) {
       team.save();
     },
     deleteteammate(teammate, team, player) {
+      if (((this.get('credentials.player')) == false) && (this.get('credentials.tempid') == (team.id))) {
       team.get('teammates').removeObject(teammate);
       team.save();
       var deletethisguy = this.store.findAll('player').then(function(teammates) {
@@ -74,6 +83,10 @@ export default Ember.Route.extend({
         filteredguys[0].get('joinedteams').removeObject(team.get('name'));
         player.save();
       });
+      }
+      else {
+        alert('This is not your team');
+      }
     },
     linktoteammate(teammate, player) {
       var self=this;
@@ -81,10 +94,9 @@ export default Ember.Route.extend({
         var filteredguys = teammates.filter(function(player) {
           return player.get('name') === teammate;
         });
-        debugger;
         var i = filteredguys[0].get('id');
         self.transitionTo('player', i);
       });
-    }
-  }
+  },
+}
 });

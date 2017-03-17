@@ -1,5 +1,8 @@
 {{nav-bar transTo="transTo"}}
 
+<button {{action 'test'}}>Test credentials</button>
+
+
 <div class="col-md-6">
 <div>
   <h2>Team Name: {{model.teams.name}}</h2>
@@ -15,7 +18,8 @@
 <ol>
   {{#each model.teams.teammates as |teammate|}}
     <li><a{{action "linktoteammate" teammate model.players}}>{{teammate}}</a>
-      <button {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button></li>
+      <button {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button>
+    </li>
   {{/each}}
 </ol>
 <hr>
