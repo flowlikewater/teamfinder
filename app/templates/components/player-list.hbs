@@ -1,7 +1,7 @@
 <div class="row">
   <h3>List of players </h3>
   {{#each model.players as |player|}}
-  <div class='row signin'>
+  <div class='row homepagebox'>
     <div class="col-md-6">
       {{#link-to 'player' player.id}}
       <h4>Player Name: {{player.name}}</h4>{{/link-to}}

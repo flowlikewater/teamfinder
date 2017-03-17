@@ -1,7 +1,7 @@
 <div class="row">
   <h3>List of Teams </h3>
   {{#each model.teams as |team|}}
-  <div class='row signin'>
+  <div class='row homepagebox'>
     {{#link-to 'team' team.id}}
     <h4>Team Name: {{team.name}}</h4>{{/link-to}}
     <h4>Category: {{team.category}}</h4>

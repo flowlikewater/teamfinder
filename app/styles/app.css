@@ -6,6 +6,22 @@
   height: 120px;
 }
 
+.homepagebox {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 2px solid rgb(205, 135, 0);
+  padding: 1px;
+}
+
+h5 {
+  font-size: 90%;
+}
+
+h6 {
+  font-size: 90%;
+}
+
 .lower {
   margin-top: 45px;
 }
@@ -50,7 +66,7 @@ input {
 body {
   background-color: #1c1c1c;
   color: rgb(226, 226, 226);
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .orangebox {
