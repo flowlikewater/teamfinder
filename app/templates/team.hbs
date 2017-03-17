@@ -1,8 +1,5 @@
 {{nav-bar transTo="transTo"}}
 
-<button {{action 'test'}}>Test credentials</button>
-
-
 <div class="col-md-6">
 <div>
   <h2>Team Name: {{model.teams.name}}</h2>
@@ -12,35 +9,32 @@
   <p>Age Range: {{model.teams.agerange}}</p>
   <p>Location: {{model.teams.location}}</p>
   <p>Description: {{model.teams.description}}</p>
-  <p>Team mates:</p>
+  <p>Teammates:</p>
 </div>
 
-<ol>
+
   {{#each model.teams.teammates as |teammate|}}
-    <li><a{{action "linktoteammate" teammate model.players}}>{{teammate}}</a>
-      <button {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button>
-    </li>
+    <h3><a{{action "linktoteammate" teammate model.players}}>{{teammate}}</a>
+      &emsp; <button class="btn btn-warning" {{action 'deleteteammate' teammate model.teams model.players}}>Delete Teammate</button>
+    </h3>
   {{/each}}
-</ol>
-<hr>
-{{creds.player}}
+
 <hr>
 
 {{edit-team team=model.teams editTeam="editTeam"}}
-
+<br>
 {{player-send-message sendMessage="sendMessage" team=model.teams}}
-
-{{#each model.teams.messages as |message|}}
-  <div class="orangebox">
-    <li>Message:{{message.message}}</li>
-    <li>Time:{{message.time}}</li>
-    <li>By {{message.name}}</li>
-    <button {{action 'addplayer' message.name model.teams model.players}}>Add player</button>
-  </div>
-{{/each}}
-
+<br>
 </div>
 
+
+
 <div class="col-md-6">
-{{set-formation team=model.teams}}
+  {{#each model.teams.messages as |message|}}
+    <div class="orangebox-message">
+      <h6>Message: {{message.message}}</h6>
+      <h6>Time: {{message.time}}</h6>
+      <span>By {{message.name}}</span> &emsp; <button class="btn btn-primary"{{action 'addplayer' message.name model.teams model.players}}>Add player</button>
+    </div>
+  {{/each}}
 </div>

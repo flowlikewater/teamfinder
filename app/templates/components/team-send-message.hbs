@@ -11,9 +11,9 @@
         <label for="message">Message</label>
         {{input value=message id="message"}}
       </div>
-      <button {{action 'sendMessage'}}>Send Message</button>
+      <button class="btn btn-primary" {{action 'sendMessage'}}>Send Message</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'MessageFormShow'}}>New Message</button>
+  <button class="btn btn-primary" {{action 'MessageFormShow'}}>New Message</button>
 {{/if}}

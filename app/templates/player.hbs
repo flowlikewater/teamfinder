@@ -1,7 +1,6 @@
 {{nav-bar transTo="transTo"}}
-
+<div class="container">
 <h4>Player Name: {{model.players.name}}</h4>
-<h3> Player ID: {{model.players.id}}</h3>
 <div class="col-md-6">
   <p><b>Sex:</b> {{model.players.sex}}</p>
   <p><b>Description:</b> {{model.players.description}}</p>
@@ -23,14 +22,15 @@
 {{team-send-message sendMessage="sendMessage" player=model.players}}
 
 <hr>
-<br>
-<br>
+
 
 
 {{#each model.players.messages as |message|}}
-  <div style="width:200px;border:1px solid red; margin:10px">
-    <p>Message:{{message.message}}</p>
-    <p>Time:{{message.time}}</p>
+  <div class="orangebox-message">
+    <p>Message: {{message.message}}</p>
+    <p>Time: {{message.time}}</p>
     <p>By {{message.name}}</p>
   </div>
 {{/each}}
+
+</div>
