@@ -1,21 +1,28 @@
 <div class="row">
   <h3>List of Teams </h3>
   {{#each model.teams as |team|}}
-  <div class='row signin'>
-    {{#link-to 'team' team.id}}
-    <h4>Team Name: {{team.name}}</h4>{{/link-to}}
-    <h4>Category: {{team.category}}</h4>
-    <div class="col-md-6">
-      <p><b>Total Players:</b> {{team.totalplayer}}</p>
-      <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
+    <div>
+      <div class='col-md-4'>
+        <h1>helper image goes here</h1>
+      </div>
+      <div class='col-md-8'>
+        <div class='row'>
+          {{#link-to 'team' team.id}}
+            <h4>Team Name: {{team.name}}</h4>{{/link-to}}
+          <p><b>Description:</b> {{team.description}}</p>
+          <h4>Category: {{team.category}}</h4>
+        </div>
+        <div class='row'>
+          <div class='col-md-6'>
+            <p><b>Total Players:</b> {{team.totalplayer}}</p>
+            <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
+          </div>
+          <div class='col-md-6'>
+            <p><b>Age Range:</b> {{team.agerange}}</p>
+            <p><b>Location:</b> {{team.location}}</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <p><b>Age Range:</b> {{team.agerange}}</p>
-      <p><b>Location:</b> {{team.location}}</p>
-    </div>
-    <div class="col-md-12">
-      <p><b>Description:</b> {{team.description}}</p>
-    </div>
-  </div>
   {{/each}}
 </div>

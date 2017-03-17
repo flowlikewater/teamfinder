@@ -19,6 +19,7 @@ export default Ember.Service.extend({
     this.set('tempid', team.get('id'));
     this.set('player', false);
     this.set('loggedin', true);
+    this.set('password',team.get('loginpassword'))
   },
   newPlayer() {
     this.set('player', true);

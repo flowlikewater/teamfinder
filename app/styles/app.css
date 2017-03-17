@@ -46,3 +46,8 @@ body {
   background-color: #1c1c1c;
   color: rgb(226, 226, 226);
 }
+
+.categoryimage {
+  height: 150px;
+  width: 200px;
+}
