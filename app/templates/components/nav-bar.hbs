@@ -1,14 +1,13 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
  <div class="container-fluid">
    <div class="navbar-header">
  {{#link-to 'homepage' class="navbar-brand"}}Team Finder{{/link-to}}
    </div>
    <ul class="nav navbar-nav">
-     <li>{{#link-to 'homepage'}}HOME{{/link-to}}</li>
      <li>{{#link-to 'homepage'}}ABOUT{{/link-to}}</li>
-     <li {{action "gotoprofile"}}>PROFILE</li>
+     <li {{action "gotoprofile"}}><a>PROFILE</a></li>
      <li>{{#link-to 'seeallteams'}}TEAMS{{/link-to}}</li>
-     <li>{{#link-to 'index'}}SIGN IN{{/link-to}}</li>
+     <li>{{#link-to 'index'}}SIGN OUT{{/link-to}}</li>
    </ul>
  </div>
 </nav>

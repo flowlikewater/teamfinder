@@ -1,4 +1,7 @@
-  <h5>Name:</h5> {{player.name}}
-  <h5>Login ID:</h5> {{player.loginid}}
-
-  <button class="btn btn-primary" {{action "selectUser" player}}>Sign In</button>
+<div class="col-md-6">
+  <h5>Name:</h5> <h6>{{player.name}}</h6>
+  <h5>Login ID:</h5> <h6>{{player.loginid}}</h6>
+</div>
+<div class="col-md-2">
+  <button class="btn btn-primary lower" {{action "selectUser" player}}>Sign In</button>
+</div>
