@@ -11,7 +11,7 @@
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 2px solid rgb(205, 135, 0);
-  padding: 1px;
+  padding: 5px;
 }
 
 h5 {
@@ -83,14 +83,14 @@ body {
   padding: 5px;
 }
 
-.categoryimage {
-  height: 150px;
-  width: 200px;
-}
-
 .feature {
   background: url('https://s3.amazonaws.com/codecademy-content/projects/2/move-gear/01.jpg') no-repeat center center;
   background-size: cover;
   height: 650px;
   width: 100%;
+}
+
+.categoryhelper {
+  height: 25px;
+  width: 25px;
 }

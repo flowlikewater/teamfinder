@@ -1,13 +1,19 @@
 <div class="row">
   <h3>List of Teams </h3>
   {{#each model.teams as |team|}}
-  <div class='row homepagebox'>
-    {{#link-to 'team' team.id}}
-    <h4>Team Name: {{team.name}}</h4>{{/link-to}}
-    <h4>Category: {{team.category}}</h4>
-    <div class="col-md-6">
-      <p><b>Total Players:</b> {{team.totalplayer}}</p>
-      <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
+    <div class='row homepagebox'>
+      <div class="col-md-12">
+      {{#link-to 'team' team.id}}
+      <h4>Team Name: {{team.name}} {{category team}}</h4>
+      {{/link-to}}
+      </div>
+      <div class="col-md-6">
+        <p><b>Total Players:</b> {{team.totalplayers}}</p>
+        <p><b>Players Wanted:</b> {{team.playerswanted}}</p>
+      </div>
+      <div class="col-md-12">
+        <p><b>Description:</b> {{team.description}} </p>
+      </div>
     </div>
   {{/each}}
 </div>
