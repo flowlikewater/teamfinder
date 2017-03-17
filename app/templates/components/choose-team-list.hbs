@@ -1,11 +1,7 @@
-
 <div class="col-md-6">
   <h5>Name:</h5> <h6>{{team.name}}</h6>
   <h5>Login ID:</h5> <h6>{{team.loginid}}</h6>
 </div>
 <div class="col-md-6">
-  {{#link-to 'homepage'}}
   <button class="btn btn-primary lower" {{action "selectTeam" team}}>Sign In</button>
-  {{/link-to}}
 </div>
-
