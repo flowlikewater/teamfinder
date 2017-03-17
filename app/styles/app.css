@@ -75,7 +75,22 @@ body {
   margin:10px;
 }
 
+.orangebox-message {
+  width:500px;
+  border:1px solid rgb(205, 135, 0);
+  border-radius: 5px;
+  margin:15px;
+  padding: 5px;
+}
+
 .categoryimage {
   height: 150px;
   width: 200px;
+}
+
+.feature {
+  background: url('https://s3.amazonaws.com/codecademy-content/projects/2/move-gear/01.jpg') no-repeat center center;
+  background-size: cover;
+  height: 650px;
+  width: 100%;
 }
