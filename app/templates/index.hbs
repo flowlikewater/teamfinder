@@ -36,21 +36,21 @@
   </div>
 </div>
 
-
 <hr>
-
+  <div style="margin-left:600px">
+{{view-credentials}}
 {{match-password}}
-
+  </div>
 
 <hr>
 
 <br>
-<div class="container">
+<div>
   <div class="col-md-6">
     <center>
       <h3> Existing Player Sign-in </h3></center>
     {{#each model.players as |player|}}
-      <div class="col-md-3 signin">
+      <div class="col-md-4 signin">
         {{choose-user-list player=player}}
       </div>
     {{/each}}
@@ -59,7 +59,7 @@
     <center>
       <h3> Existing Team Sign-in </h3></center>
     {{#each model.teams as |team|}}
-      <div class="col-md-3 signin">
+      <div class="col-md-4 signin">
         {{choose-team-list team=team}}
       </div>
     {{/each}}
